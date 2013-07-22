@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5853D6C1-DADA-42A5-B8D0-D7DC8866721C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Maze</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D5A617DD-2FD6-452A-93C9-F4ECB241235D</key>
+		<string>ssh://github.com/georgewu2/maze.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Maze.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D5A617DD-2FD6-452A-93C9-F4ECB241235D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/georgewu2/maze.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D5A617DD-2FD6-452A-93C9-F4ECB241235D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D5A617DD-2FD6-452A-93C9-F4ECB241235D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Maze</string>
+		</dict>
+	</array>
+</dict>
+</plist>

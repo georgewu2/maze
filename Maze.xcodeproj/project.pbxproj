@@ -21,6 +21,9 @@
 		7B127E43179D9C7D0079A4F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B127E25179D9C7D0079A4F4 /* UIKit.framework */; };
 		7B127E4B179D9C7D0079A4F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B127E49179D9C7D0079A4F4 /* InfoPlist.strings */; };
 		7B127E4D179D9C7D0079A4F4 /* MazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B127E4C179D9C7D0079A4F4 /* MazeTests.m */; };
+		7B127E57179DA0C40079A4F4 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B127E56179DA0C40079A4F4 /* SpriteKit.framework */; };
+		7B127E5D179DA2190079A4F4 /* MazeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B127E5C179DA2190079A4F4 /* MazeScene.m */; };
+		7B127E60179DA6070079A4F4 /* WelcomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B127E5F179DA6070079A4F4 /* WelcomeScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		7B127E48179D9C7D0079A4F4 /* MazeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeTests-Info.plist"; sourceTree = "<group>"; };
 		7B127E4A179D9C7D0079A4F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B127E4C179D9C7D0079A4F4 /* MazeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeTests.m; sourceTree = "<group>"; };
+		7B127E56179DA0C40079A4F4 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		7B127E5B179DA2190079A4F4 /* MazeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeScene.h; sourceTree = SOURCE_ROOT; };
+		7B127E5C179DA2190079A4F4 /* MazeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeScene.m; sourceTree = SOURCE_ROOT; };
+		7B127E5E179DA6070079A4F4 /* WelcomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScene.h; sourceTree = "<group>"; };
+		7B127E5F179DA6070079A4F4 /* WelcomeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B127E57179DA0C40079A4F4 /* SpriteKit.framework in Frameworks */,
 				7B127E24179D9C7D0079A4F4 /* CoreGraphics.framework in Frameworks */,
 				7B127E26179D9C7D0079A4F4 /* UIKit.framework in Frameworks */,
 				7B127E22179D9C7D0079A4F4 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		7B127E20179D9C7D0079A4F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B127E56179DA0C40079A4F4 /* SpriteKit.framework */,
 				7B127E21179D9C7D0079A4F4 /* Foundation.framework */,
 				7B127E23179D9C7D0079A4F4 /* CoreGraphics.framework */,
 				7B127E25179D9C7D0079A4F4 /* UIKit.framework */,
@@ -117,6 +127,10 @@
 				7B127E33179D9C7D0079A4F4 /* Main.storyboard */,
 				7B127E36179D9C7D0079A4F4 /* GWUViewController.h */,
 				7B127E37179D9C7D0079A4F4 /* GWUViewController.m */,
+				7B127E5E179DA6070079A4F4 /* WelcomeScene.h */,
+				7B127E5F179DA6070079A4F4 /* WelcomeScene.m */,
+				7B127E5B179DA2190079A4F4 /* MazeScene.h */,
+				7B127E5C179DA2190079A4F4 /* MazeScene.m */,
 				7B127E39179D9C7D0079A4F4 /* Images.xcassets */,
 				7B127E28179D9C7D0079A4F4 /* Supporting Files */,
 			);
@@ -251,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B127E32179D9C7D0079A4F4 /* GWUAppDelegate.m in Sources */,
+				7B127E60179DA6070079A4F4 /* WelcomeScene.m in Sources */,
+				7B127E5D179DA2190079A4F4 /* MazeScene.m in Sources */,
 				7B127E2E179D9C7D0079A4F4 /* main.m in Sources */,
 				7B127E38179D9C7D0079A4F4 /* GWUViewController.m in Sources */,
 			);
@@ -378,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Maze/Maze-Prefix.pch";
 				INFOPLIST_FILE = "Maze/Maze-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,6 +408,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Maze/Maze-Prefix.pch";
 				INFOPLIST_FILE = "Maze/Maze-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
