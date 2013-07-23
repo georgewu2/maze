@@ -36,9 +36,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     WelcomeScene *welcome = [[WelcomeScene alloc] initWithSize:CGSizeMake(640, 1136)];
-    MazeScene *maze = [[MazeScene alloc] initWithSize:CGSizeMake(640, 1136)];
+//    MazeScene *maze = [[MazeScene alloc] initWithSize:CGSizeMake(640, 1136)];rudiktlghnrrhkuuk
     SKView *spriteView = (SKView *)self.view;
-    [spriteView presentScene:maze];
+    [spriteView presentScene:welcome];
 //    MazeScene *maze = [[MazeScene alloc] initWithSize:CGSizeMake(640, 1136)];
 //    SKView *spriteView = (SKView *)self.view;
 //    [spriteView presentScene:maze];

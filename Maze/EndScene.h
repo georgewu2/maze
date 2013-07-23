@@ -1,5 +1,5 @@
 //
-//  MazeScene.h
+//  EndScene.h
 //  Maze
 //
 //  Created by George Wu on 7/22/13.
@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MazeScene : SKScene <SKPhysicsContactDelegate>
+@interface EndScene : SKScene
 
 @end
