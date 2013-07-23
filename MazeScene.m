@@ -157,12 +157,13 @@
 - (void)didSimulatePhysics
 {
     if ([self isNearHero:self.endNode.position]) {
+        SKAction *fadeaway = [SKAction fadeOutWithDuration:0.25];
         SKAction *remove = [SKAction removeFromParent];
         for (SKSpriteNode *wall in self.walls) {
-            [wall runAction:remove];
+            [wall runAction:[SKAction sequence:@[fadeaway,remove]]];
         }
-        [self.hero runAction:remove];
-        [self.endNode runAction:remove completion:^{
+        [self.hero runAction:[SKAction sequence:@[fadeaway, remove]]];
+        [self.endNode runAction:[SKAction sequence:@[fadeaway,remove]] completion:^{
             SKScene *endScene = [[EndScene alloc] initWithSize:self.size];
             SKTransition *doors = [SKTransition doorsOpenHorizontalWithDuration:0.5];
             [self.view presentScene:endScene transition:doors];

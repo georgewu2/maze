@@ -7,6 +7,7 @@
 //
 
 #import "EndScene.h"
+#import "MazeScene.h"
 
 @interface EndScene ()
 @property BOOL contentCreated;
@@ -47,9 +48,30 @@
     gameNode.text = @"Touch screen to play again";
     gameNode.name = @"game";
     gameNode.fontSize = 42;
-    gameNode.fontColor = [SKColor purpleColor];
-    gameNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 40);
+    gameNode.fontColor = [SKColor redColor];
+    gameNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 60);
     return gameNode;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    SKNode *congratsNode = [self childNodeWithName:@"congrats"];
+    SKNode *gameNode = [self childNodeWithName:@"game"];
+    if (congratsNode != nil && gameNode != nil) {
+        congratsNode.name = nil;
+        gameNode.name = nil;
+        SKAction *fadeAway = [SKAction fadeOutWithDuration:0.25];
+        SKAction *moveUp = [SKAction moveByX:0 y:600 duration:0.5];
+        SKAction *remove = [SKAction removeFromParent];
+        SKAction *welcomeMove = [SKAction sequence:@[fadeAway, remove]];
+        SKAction *gameMove = [SKAction sequence:@[moveUp, remove]];
+        [congratsNode runAction:welcomeMove];
+        [gameNode runAction:gameMove completion:^{
+            SKScene *mazeScene = [[MazeScene alloc] initWithSize:self.size];
+            SKTransition *doors = [SKTransition doorsOpenHorizontalWithDuration:0.5];
+            [self.view presentScene:mazeScene transition:doors];
+        }];
+    }
 }
 
 @end
